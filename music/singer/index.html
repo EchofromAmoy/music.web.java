@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>singer</title>
+		<!-- 分页样式 -->
+		<link rel="stylesheet" type="text/css" href="css/page.css" />
+		<link rel="stylesheet" type="text/css" href="css/simplePagination.css" />
+		<!-- 任务图片显示 -->
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/hover.css">
+		<!-- bootstrap框架 -->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- 分类条件筛选列表 -->
+		<link href="css/condition.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/current.js"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+
+			a,
+			img {
+				border: 0;
+			}
+
+			/* flexslider */
+			.flexslider {
+				position: relative;
+				height: 400px;
+				overflow: hidden;
+				background: url(images/loading.gif) 50% no-repeat;
+			}
+
+			.slides {
+				position: relative;
+				z-index: 1;
+			}
+
+			.slides li {
+				height: 400px;
+			}
+
+			.flex-control-nav {
+				position: absolute;
+				bottom: 10px;
+				z-index: 2;
+				width: 100%;
+				text-align: center;
+			}
+
+			.flex-control-nav li {
+				display: inline-block;
+				width: 14px;
+				height: 14px;
+				margin: 0 5px;
+				*display: inline;
+				zoom: 1;
+			}
+
+			.flex-control-nav a {
+				display: inline-block;
+				width: 14px;
+				height: 14px;
+				line-height: 40px;
+				overflow: hidden;
+				background: url(images/dot.png) right 0 no-repeat;
+				cursor: pointer;
+			}
+
+			.flex-control-nav .flex-active {
+				background-position: 0 0;
+			}
+
+			.flex-direction-nav {
+				position: absolute;
+				z-index: 3;
+				width: 100%;
+				top: 45%;
+			}
+
+			.flex-direction-nav li a {
+				display: block;
+				width: 50px;
+				height: 50px;
+				overflow: hidden;
+				cursor: pointer;
+				position: absolute;
+			}
+
+			.flex-direction-nav li a.flex-prev {
+				left: 40px;
+				background: url(images/prev.png) center center no-repeat;
+			}
+
+			.flex-direction-nav li a.flex-next {
+				right: 40px;
+				background: url(images/next.png) center center no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 轮播图 -->
+		<div class="jq22-container">
+
+			<div class="flexslider">
+				<ul class="slides">
+					<li style="background:url(images/bg_shop.jpg) 50% 0 no-repeat;"></li>
+					<li style="background:url(images/bg_singers.jpg) 50% 0 no-repeat;"></li>
+					<li style="background:url(images/bg_singers2.jpg) 50% 0 no-repeat;"></li>
+					<li style="background:url(images/bg_singer1.jpg) 50% 0 no-repeat;"></li>
+					<li style="background:url(images/bg_singer2.jpg) 50% 0 no-repeat;"></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 条件筛选 -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="cation-content">
+						<div class="cation-middle">
+							<dl class="cation-list">
+								<dt>热门</dt>
+								<dd>
+									<a href="#" rel="" name="mode" class="all on">热门</a>
+									<a href="#" rel="A" name="mode" class="default">A</a>
+									<a href="#" rel="B" name="mode" class="default">B</a>
+									<a href="#" rel="C" name="mode" class="default">C</a>
+									<a href="#" rel="D" name="mode" class="default">D</a>
+									<a href="#" rel="E" name="mode" class="default">E</a>
+									<a href="#" rel="F" name="mode" class="default">F</a>
+									<a href="#" rel="G" name="mode" class="default">G</a>
+									<a href="#" rel="H" name="mode" class="default">H</a>
+									<a href="#" rel="I" name="mode" class="default">J</a>
+									<a href="#" rel="K" name="mode" class="default">K</a>
+									<a href="#" rel="L" name="mode" class="default">L</a>
+									<a href="#" rel="M" name="mode" class="default">M</a>
+									<a href="#" rel="N" name="mode" class="default">N</a>
+									<a href="#" rel="O" name="mode" class="default">O</a>
+									<a href="#" rel="P" name="mode" class="default">P</a>
+									<a href="#" rel="Q" name="mode" class="default">Q</a>
+									<a href="#" rel="R" name="mode" class="default">R</a>
+									<a href="#" rel="S" name="mode" class="default">S</a>
+									<a href="#" rel="T" name="mode" class="default">T</a>
+									<a href="#" rel="U" name="mode" class="default">U</a>
+									<a href="#" rel="V" name="mode" class="default">V</a>
+									<a href="#" rel="W" name="mode" class="default">W</a>
+									<a href="#" rel="X" name="mode" class="default">X</a>
+									<a href="#" rel="S" name="mode" class="default">S</a>
+									<a href="#" rel="Y" name="mode" class="default">Y</a>
+									<a href="#" rel="#" name="mode" class="default">#</a>
+								</dd>
+							</dl>
+							<dl class="cation-list">
+								<dt>地区</dt>
+								<dd>
+									<a href="#" rel="" name="theme" class="all on">全部</a>
+									<a href="#" rel="内地" name="theme" class="default">内地</a>
+									<a href="#" rel="港台" name="theme" class="default">港台</a>
+									<a href="#" rel="欧美" name="theme" class="default">欧美</a>
+									<a href="#" rel="日本" name="theme" class="default">日本</a>
+									<a href="#" rel="韩国" name="theme" class="default">韩国</a>
+									<a href="#" rel="其他" name="theme" class="default">其他</a>
+								</dd>
+							</dl>
+							<dl class="cation-list">
+								<dt>男/女</dt>
+								<dd>
+									<a href="#" rel="" name="system" class="all on">全部</a>
+									<a href="#" rel="男" name="system" class="default">男</a>
+									<a href="#" rel="女" name="system" class="default">女</a>
+									<a href="#" rel="组合" name="system" class="default">组合</a>
+								</dd>
+							</dl>
+							<dl class="cation-list">
+								<dt>类别</dt>
+								<dd>
+									<a href="#" rel="" name="category" class="all on">全部</a>
+									<a href="#" rel="流行" name="category" class="default">流行</a>
+									<a href="#" rel="嘻哈" name="category" class="default">嘻哈 </a>
+									<a href="#" rel="摇滚" name="category" class="default">摇滚</a>
+									<a href="#" rel="电子" name="category" class="default">电子</a>
+									<a href="#" rel="民谣" name="category" class="default">民谣</a>
+									<a href="#" rel="R&B" name="category" class="default">R&B</a>
+									<a href="#" rel="民歌" name="category" class="default">民歌</a>
+									<a href="#" rel="轻音乐" name="category" class="default">轻音乐</a>
+									<a href="#" rel="古典" name="category" class="default">古典</a>
+									<a href="#" rel="乡村" name="category" class="default">乡村</a>
+									<a href="#" rel="蓝调" name="category" class="default">蓝调</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- 人物展示 -->
+		<div class="container" style="padding-top: -50px;">
+			<!-- Team members structure start -->
+			<div class="team-members row">
+				<!-- effect-1 html -->
+				<div class="col-md-3">
+					<div class="single-member effect-1">
+						<div class="member-image">
+							<img src="images/member_140x145.jpg" alt="Member">
+						</div>
+						<div class="member-info">
+							<h3>Sophia</h3>
+							<h5>ShowGilr</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+								magna aliqua.</p>
+							<div class="social-touch">
+								<a class="fb-touch" href="#"></a>
+								<a class="tweet-touch" href="#"></a>
+								<a class="linkedin-touch" href="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="single-member effect-1">
+						<div class="member-image">
+							<img src="images/member_140x145.jpg" alt="Member">
+						</div>
+						<div class="member-info">
+							<h3>Sophia</h3>
+							<h5>ShowGilr</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+								magna aliqua.</p>
+							<div class="social-touch">
+								<a class="fb-touch" href="#"></a>
+								<a class="tweet-touch" href="#"></a>
+								<a class="linkedin-touch" href="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="single-member effect-1">
+						<div class="member-image">
+							<img src="images/member_140x145.jpg" alt="Member">
+						</div>
+						<div class="member-info">
+							<h3>Sophia</h3>
+							<h5>ShowGilr</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+								magna aliqua.</p>
+							<div class="social-touch">
+								<a class="fb-touch" href="#"></a>
+								<a class="tweet-touch" href="#"></a>
+								<a class="linkedin-touch" href="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="single-member effect-1">
+						<div class="member-image">
+							<img src="images/member_140x145.jpg" alt="Member">
+						</div>
+						<div class="member-info">
+							<h3>Sophia</h3>
+							<h5>ShowGilr</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+								magna aliqua.</p>
+							<div class="social-touch">
+								<a class="fb-touch" href="#"></a>
+								<a class="tweet-touch" href="#"></a>
+								<a class="linkedin-touch" href="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Team members structure start -->
+			<div class="team-members row">
+				<!-- effect-1 html -->
+				<div class="col-md-3">
+					<div class="single-member effect-1">
+						<div class="member-image">
+							<img src="images/member_140x145.jpg" alt="Member">
+						</div>
+						<div class="member-info">
+							<h3>Sophia</h3>
+							<h5>ShowGilr</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore
+								magna aliqua.</p>
+							<div class="social-touch">
+								<a class="fb-touch" href="#"></a>
+								<a class="tweet-touch" href="#"></a>
+								<a class="linkedin-touch" href="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="single-member effect-1">
+						<div class="member-image">
+							<img src="images/member_140x145.jpg" alt="Member">
+						</div>
+						<div class="member-info">
+							<h3>Sophia</h3>
+							<h5>ShowGilr</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore
+								magna aliqua.</p>
+							<div class="social-touch">
+								<a class="fb-touch" href="#"></a>
+								<a class="tweet-touch" href="#"></a>
+								<a class="linkedin-touch" href="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="single-member effect-1">
+						<div class="member-image">
+							<img src="images/member_140x145.jpg" alt="Member">
+						</div>
+						<div class="member-info">
+							<h3>Sophia</h3>
+							<h5>ShowGilr</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore
+								magna aliqua.</p>
+							<div class="social-touch">
+								<a class="fb-touch" href="#"></a>
+								<a class="tweet-touch" href="#"></a>
+								<a class="linkedin-touch" href="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="single-member effect-1">
+						<div class="member-image">
+							<img src="images/member_140x145.jpg" alt="Member">
+						</div>
+						<div class="member-info">
+							<h3>Sophia</h3>
+							<h5>ShowGilr</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+								dolore
+								magna aliqua.</p>
+							<div class="social-touch">
+								<a class="fb-touch" href="#"></a>
+								<a class="tweet-touch" href="#"></a>
+								<a class="linkedin-touch" href="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 迭代数据 -->
+			<div class="row" style="text-align: center;">
+				<div class="col-md-3">
+					<ul>
+						<li>周杰伦</li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul>
+						<li>周杰伦</li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul>
+						<li>周杰伦</li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<ul>
+						<li>周杰伦</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 分页插件 -->
+			<div class="row">
+				<div class="col-md-3">
+					
+				</div>
+				<div class="col-md-6">
+					<div class="pagination-holder clearfix">
+						<div id="light-pagination" class="pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- 条件筛选 -->
+		<script type="text/javascript">
+			$(function() {
+				new SelectTag({
+					child: ".default", //所有默认
+					over: 'on', //当前选中
+					all: ".all" // 默认全部
+				});
+			})
+		</script>
+		<script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
+		
+		<script src="js/jquery.simplePagination.js"></script>
+		
+		<script src="js/index.js"></script>
+
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.flexslider').flexslider({
+					directionNav: true,
+					pauseOnAction: false,
+					slideshowSpeed: 3000
+				});
+			});
+		</script>
+	</body>
+</html>
